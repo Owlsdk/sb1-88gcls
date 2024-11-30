@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base responsive adjustments */
+html {
+  @apply antialiased;
+}
+
+body {
+  @apply bg-gray-900;
+}
+
+/* Custom styles for DatePicker */
+.react-datepicker {
+  @apply bg-gray-800 border border-gray-700 text-white;
+}
+
+.react-datepicker__header {
+  @apply bg-gray-900 border-gray-700;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  @apply text-white;
+}
+
+.react-datepicker__day {
+  @apply text-gray-300 hover:bg-gray-700;
+}
+
+.react-datepicker__day--selected {
+  @apply bg-orange-500 text-white hover:bg-orange-600;
+}
+
+.react-datepicker__day--disabled {
+  @apply text-gray-600;
+}
+
+.react-datepicker__navigation-icon::before {
+  @apply border-gray-400;
+}
+
+/* Responsive chart container */
+.recharts-responsive-container {
+  @apply !min-h-[300px] sm:!min-h-[400px];
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full hover:bg-gray-600;
+}
+
+/* Responsive text adjustments */
+@screen sm {
+  .text-responsive {
+    @apply text-base;
+  }
+}
+
+@screen xs {
+  .text-responsive {
+    @apply text-sm;
+  }
+}
+
+/* Improved mobile form elements */
+input[type="number"],
+input[type="text"],
+select {
+  @apply text-base sm:text-lg;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Better touch targets on mobile */
+button {
+  @apply min-h-[44px];
+}
+
+/* Responsive padding adjustments */
+.content-wrapper {
+  @apply px-4 sm:px-6 lg:px-8;
+}
